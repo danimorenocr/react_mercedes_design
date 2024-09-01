@@ -1,13 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.rectangulo-diagonal {
+  width: 1100px; /* Ancho del rectángulo */
+  height: 550px; /* Alto del rectángulo */
+  background: rgb(215, 215, 215);
+  background: linear-gradient(
+    220deg,
+    rgba(215, 215, 215, 1) 0%,
+    rgba(234, 234, 234, 1) 35%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  transform: rotate(117deg) translate(100px, 20px); /* Rotación y traslación */
+  margin: 10px; /* Espacio alrededor del rectángulo */
+  position: relative; /* Posicionamiento relativo */
+}
+
+.titulo {
+  position: absolute; /* Posicionamiento absoluto para el texto */
+  top: 60px; /* Ajusta este valor para posicionar el texto sobre el rectángulo */
+  right: 300px; /* Ajusta este valor para centrar el texto horizontalmente */
+  font-size: 120px; /* Tamaño del texto */
+  font-family: "Krona One", sans-serif; /* Aplica la fuente Krona One */
+  background: linear-gradient(
+    90deg,
+    #000000 15%,
+    #aaa 50%,
+    #ffffff 100%
+  ); /* Degradado de grises */
+  -webkit-background-clip: text; /* Aplica el degradado al texto en Webkit browsers */
+  -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el degradado */
+  background-clip: text; /* Aplica el degradado al texto en otros browsers */
+  text-fill-color: transparent; /* Hace el texto transparente para mostrar el degradado */
+}
+
+.benz {
+  top: 170px;
+}
+.amg-car {
+  position: absolute; /* Posicionamiento absoluto para la imagen del coche */
+  top: 200px; /* Ajusta este valor según la posición deseada */
+  left: 200px; /* Ajusta este valor según la posición deseada */
+  z-index: 2; /* Asegura que el coche esté encima del rectángulo */
+}
+.marca {
+  position: relative;
+  color: rgb(0, 0, 0);
+  left: 200px;
+  font-size: 25px;
+  font-family: "Krona One", sans-serif; /* Aplica la fuente Krona One */
+  z-index: 2;
+}
+
+/* Estilos para el botón */
+.button-container {
+  position: absolute; /* Posicionamiento absoluto para colocar el botón en una posición específica */
+  right: 200px; /* Ajusta este valor para posicionar el botón desde el borde derecho de la pantalla */
+  bottom: 100px; /* Ajusta este valor para posicionar el botón desde el borde inferior de la pantalla */
+}
+
+.custom-button {
+  background-color: #000; /* Fondo negro */
+  border: 2px solid #fff; /* Borde blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  color: #fff; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-family: "Krona One", sans-serif;
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  outline: none; /* Elimina el borde por defecto del botón en algunos navegadores */
+  transition: background-color 0.3s, border-color 0.3s; /* Transición suave para cambios de color */
+}
+
+.custom-button:hover {
+  background-color: #ffffff; /* Fondo negro más claro al pasar el mouse sobre el botón */
+  color: #000000;
+}
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background: #000; /* Fondo del track (canal) de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333; /* Color de la barra */
+  border-radius: 10px; /* Bordes redondeados para la barra */
+  border: 2px solid #000; /* Borde alrededor de la barra para integrarlo con el track */
+}
+
+/* Opcional: Estilo para la barra de desplazamiento en hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color de la barra cuando se pasa el mouse por encima */
 }
